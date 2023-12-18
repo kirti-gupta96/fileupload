@@ -1,3 +1,6 @@
+Language used- NodeJs, ExpressJs, Javascript
+DB- mongodb
+
 1. To install all the dependencies
    npm i
 2. Run the application by running 
