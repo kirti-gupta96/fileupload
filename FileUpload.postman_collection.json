@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "bf520b29-675a-467f-b5b6-12ecffa7693f",
+		"name": "FileUpload",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25179922"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"kirti.gupta@gmail.com\",\n    \"password\": \"abc@123\",\n    \"role\": \"admin\",\n    \"name\": \"Kirti Gupta\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"kirti.gupta@gmail.com\",\n    \"password\": \"abc@123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InUtODc3NGVhYzItZjQxNC00Y2ZkLTkyYjgtNDc5ZTU5NWEzYzFiIiwiZW1haWwiOiJraXJ0aS5ndXB0YUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDI4ODc3MTIsImV4cCI6MTcwMjk3NDExMn0.RZeduvp6vZVt2JMnQFNE3zL3g45bgoCXFhVVgL7Htsg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/kirti.gupta/Downloads/istockphoto-186255464-612x612.jpeg"
+						},
+						{
+							"key": "description",
+							"value": "cat pictures",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/picture/getList?skip=0&limit=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"picture",
+						"getList"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getFileById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InUtODc3NGVhYzItZjQxNC00Y2ZkLTkyYjgtNDc5ZTU5NWEzYzFiIiwiZW1haWwiOiJraXJ0aS5ndXB0YUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDI4ODc3MTIsImV4cCI6MTcwMjk3NDExMn0.RZeduvp6vZVt2JMnQFNE3zL3g45bgoCXFhVVgL7Htsg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/kirti.gupta/Downloads/istockphoto-186255464-612x612.jpeg"
+						},
+						{
+							"key": "description",
+							"value": "cat pictures",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/picture/pc-d78b831f-44b0-4d4f-b334-b1ca4e9d43dab",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"picture",
+						"pc-d78b831f-44b0-4d4f-b334-b1ca4e9d43dab"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UploadFile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InUtODc3NGVhYzItZjQxNC00Y2ZkLTkyYjgtNDc5ZTU5NWEzYzFiIiwiZW1haWwiOiJraXJ0aS5ndXB0YUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDI4ODc3MTIsImV4cCI6MTcwMjk3NDExMn0.RZeduvp6vZVt2JMnQFNE3zL3g45bgoCXFhVVgL7Htsg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/kirti.gupta/Downloads/istockphoto-186255464-612x612.jpeg"
+						},
+						{
+							"key": "description",
+							"value": "cat picture",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/picture/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"picture",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateFile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InUtODc3NGVhYzItZjQxNC00Y2ZkLTkyYjgtNDc5ZTU5NWEzYzFiIiwiZW1haWwiOiJraXJ0aS5ndXB0YUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDI4ODc3MTIsImV4cCI6MTcwMjk3NDExMn0.RZeduvp6vZVt2JMnQFNE3zL3g45bgoCXFhVVgL7Htsg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/kirti.gupta/Downloads/istockphoto-186255464-612x612.jpeg"
+						},
+						{
+							"key": "description",
+							"value": "cat pictures",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/picture/pc-a97731b2-12e1-42a2-991f-cc01d715f5d0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"picture",
+						"pc-a97731b2-12e1-42a2-991f-cc01d715f5d0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteFile",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InUtODc3NGVhYzItZjQxNC00Y2ZkLTkyYjgtNDc5ZTU5NWEzYzFiIiwiZW1haWwiOiJraXJ0aS5ndXB0YUBnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDI4ODc3MTIsImV4cCI6MTcwMjk3NDExMn0.RZeduvp6vZVt2JMnQFNE3zL3g45bgoCXFhVVgL7Htsg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/kirti.gupta/Downloads/istockphoto-186255464-612x612.jpeg"
+						},
+						{
+							"key": "description",
+							"value": "cat pictures",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/picture/pc-a97731b2-12e1-42a2-991f-cc01d715f5d0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"picture",
+						"pc-a97731b2-12e1-42a2-991f-cc01d715f5d0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
